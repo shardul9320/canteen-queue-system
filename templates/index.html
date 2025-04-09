@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canteen Queue System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Welcome to the Canteen Queue System</h1>
+        <p>Click the button below to generate your queue token.</p>
+        <form action="{{ url_for('generate_token') }}" method="post">
+            <button type="submit" class="primary-btn">Generate New Token</button>
+        </form>
+    </div>
+</body>
+</html>

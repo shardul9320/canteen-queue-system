@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Token Queue</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta http-equiv="refresh" content="5">
+</head>
+<body>
+    <h1>🔧 Admin Panel</h1>
+    <table>
+        <tr>
+            <th>Token</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for token in tokens %}
+        <tr>
+            <td>{{ token.token }}</td>
+            <td>{{ token.status }}</td>
+            <td>{{ token.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
